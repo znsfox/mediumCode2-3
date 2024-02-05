@@ -1,8 +1,10 @@
-package listener;
+package com.example.mediumcode23.listener;
+
+
 
 import com.alibaba.excel.context.AnalysisContext;
-import pojo.UserInfo;
-import service.ReadEasyExeclService;
+import com.example.mediumcode23.pojo.UserInfo;
+import com.example.mediumcode23.service.ReadEasyExeclService;
 
 import java.util.List;
 import java.util.UUID;
@@ -23,7 +25,6 @@ public class ReadEasyExeclAsyncListener {
         this.LIST = list;
     }
 
-    @Override
     public void invoke(UserInfo data, AnalysisContext analysisContext) {
         data.setUuid(uuid());
         data.setTableName(TABLE_NAME);
@@ -34,7 +35,6 @@ public class ReadEasyExeclAsyncListener {
         }
     }
 
-    @Override
     public void doAfterAllAnalysed(AnalysisContext analysisContext) {
         if(LIST.size() > 0){
             // 最后一批入库
@@ -47,4 +47,3 @@ public class ReadEasyExeclAsyncListener {
     }
 }
 
-}

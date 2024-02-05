@@ -1,4 +1,4 @@
-package config;
+package com.example.mediumcode23.config;
 
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import org.springframework.context.annotation.Bean;

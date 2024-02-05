@@ -1,4 +1,5 @@
-package pojo;
+package com.example.mediumcode23.pojo;
+
 
 import com.alibaba.excel.annotation.ExcelProperty;
 import lombok.Data;
@@ -24,4 +25,6 @@ public class UserInfo {
 
     @ExcelProperty(value = "PHONE")
     private String phone;
+
+
 }
